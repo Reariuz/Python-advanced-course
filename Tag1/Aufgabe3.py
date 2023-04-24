@@ -12,8 +12,9 @@ Month = int(GebDat[3:5])
 Year = int(GebDat[6:10])
 
 today = date.today()
-print(today.year - Year - ((today.month, today.day) < (Month, Day)))
+
 if (today.year - Year - ((today.month, today.day) < (Month, Day))) >= 18:
     print("unbeschränkter Zugang")
 else:
     print("eingeschränkter Zugang")
+    
