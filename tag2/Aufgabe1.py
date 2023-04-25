@@ -42,7 +42,7 @@ Users = {"Ottmar":"1234", "Josef":"34567"}
 while True:
     print("(e)inloggen\nneu (r)egistrieren\n(a)bbruch\n")
     Selection = input()
-    if Selection == "e" or "E":
+     
         Login    = input("Ihr Benutzername: ")
         Password = input("Ihr Kennwort:     ")
         Zugang = False
@@ -57,7 +57,7 @@ while True:
             print("Benutzername oder Kennwort falsch\n")
             continue
 
-    elif Selection == "r" or "R":
+    elif Selection == "r" or Selection == "R":
         Login    = input("Ihr Benutzername: ")
         Zugang = True
         for keys in Users:
@@ -66,13 +66,17 @@ while True:
         if Zugang:
             Password = input("Ihr Kennwort:     ")
             Users[Login] = Password
-            break
+            continue
+            #break
         else:
             print("Der Benutzername ist bereits vorhanden")
             continue
+    
+    elif Selection == "a" or Selection =="A":
+        break
 
     else:
-        break
+        continue
 
     print("Es geht weiter")
 
